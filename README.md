@@ -147,3 +147,7 @@ LEFT JOIN cost_table
 	ON bike_share_data.yr = cost_table.yr;
 
 ```
+# Visualisation
+## Results
+The dashboard looks as below:
+![Dashboard](assets/images/Dashboard.png)
