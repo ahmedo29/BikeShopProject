@@ -151,3 +151,10 @@ LEFT JOIN cost_table
 ## Results
 The dashboard looks as below:
 ![Dashboard](assets/images/dashboard.png)
+
+# Dax Measures
+### Profit Margin (%)
+
+```sql
+Profit Margin = (SUM(bike_data[revenue]) - SUM(bike_data[profit]))/SUM(bike_data[profit])
+```
