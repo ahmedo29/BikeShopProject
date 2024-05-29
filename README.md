@@ -147,6 +147,30 @@ LEFT JOIN cost_table
 	ON bike_share_data.yr = cost_table.yr;
 
 ```
+# Data Transformation
+## Power Query
+I used Power Query to transform the data to make it suitable for analysis and to create an interactive dashboard.
+
+1. I firstly made each column the correct data type which is suitable for them
+2. I added a conditional column which made the year more suitable for visualisations
+3. I added a conditional column which made the weekday more suitable for visualisation
+4. I added a conditional column which made the seasons more suitable for visualisation
+
+### Year conditional column
+```sql
+= Table.AddColumn(Source, "Year", each if [yr] = "0" then 2021 else if [yr] = "1" then 2022 else null)
+```
+
+### Weekday conditional column
+```sql
+= Table.AddColumn(#"Added Conditional Column", "Custom", each if [weekday] = "0" then "Mon" else if [weekday] = "1" then "Tues" else if [weekday] = "2" then "Wed" else if [weekday] = "3" then "Thurs" else if [weekday] = "4" then "Fri" else if [weekday] = "5" then "Sat" else if [weekday] = "6" then "Sun" else null)
+```
+
+### Season conditional column
+```sql
+= Table.AddColumn(#"Renamed Columns", "Season_name", each if [season] = "1" then "Winter" else if [season] = "2" then "Spring" else if [season] = "3" then "Summer" else if [season] = "4" then "Autumn" else null)
+```
+
 # Visualisation
 ## Results
 The dashboard looks as below:
@@ -158,3 +182,15 @@ The dashboard looks as below:
 ```sql
 Profit Margin = (SUM(bike_data[revenue]) - SUM(bike_data[profit]))/SUM(bike_data[profit])
 ```
+
+## Discovery
+### What did we learn?
+
+We discovered that:
+
+1. 8:00, 16:00 - 19:00 are the busiest hours, all generating a revenue of over $1,000,000
+2. Sunday, Saturday and Friday are the three busiest days, generating the most revenue
+3. There is a sum of 3 million riders
+4. They have generated $15.2 Million in revenue
+5. They have generated $10.4 Million in profit
+6. The season that generated the most revenue was Summer, followed by Spring, Autumn and then Winter
