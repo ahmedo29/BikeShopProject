@@ -127,3 +127,23 @@ FROM bike_share_data
 LEFT JOIN cost_table
 	ON bike_share_data.yr = cost_table.yr;
 ```
+# Data Validation
+I used SQL to calculate the sum of revenue and profit and to validate it was the same figures as seen on the Power Bi dashboard
+
+```sql
+WITH bike_share_data AS (
+	SELECT *
+	FROM bike_share_yr_0
+	UNION
+	SELECT *
+	FROM bike_share_yr_1
+)
+
+SELECT
+	ROUND(SUM(riders * price),2) AS revenue,
+	ROUND(SUM(riders * price - COGS * riders),2) AS profit
+FROM bike_share_data
+LEFT JOIN cost_table
+	ON bike_share_data.yr = cost_table.yr;
+
+```
