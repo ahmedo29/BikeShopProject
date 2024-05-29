@@ -150,4 +150,4 @@ LEFT JOIN cost_table
 # Visualisation
 ## Results
 The dashboard looks as below:
-![Dashboard](assets/images/Dashboard.png)
+![Dashboard](assets/images/dashboard.png)
