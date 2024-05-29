@@ -150,7 +150,7 @@ LEFT JOIN cost_table
 # Visualisation
 ## Results
 The dashboard looks as below:
-![Dashboard](assets/images/dashboard.png)
+![Dashboard](assets/images/dashboard1.png)
 
 # Dax Measures
 ### Profit Margin (%)
