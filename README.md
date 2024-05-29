@@ -183,6 +183,8 @@ The dashboard looks as below:
 Profit Margin = (SUM(bike_data[revenue]) - SUM(bike_data[profit]))/SUM(bike_data[profit])
 ```
 
+# Analysis 
+
 ## Discovery
 ### What did we learn?
 
@@ -194,3 +196,8 @@ We discovered that:
 4. They have generated $15.2 Million in revenue
 5. They have generated $10.4 Million in profit
 6. The season that generated the most revenue was Summer, followed by Spring, Autumn and then Winter
+
+## Business Question
+
+"Based on your analysis, would you recommend increasing the prices for the year 2023?"
+
