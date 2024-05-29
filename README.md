@@ -201,3 +201,31 @@ We discovered that:
 
 "Based on your analysis, would you recommend increasing the prices for the year 2023?"
 
+### Analysis
+![analysis](assets/images/analysis.png)
+
+Here we have the data for 2021 compared to 2022
+
+1. The difference in customers from 2021 to 2022 was +806,473 people
+2. The price in 2021 was $3.99 and in 2022 it was $4.99 (+25% Increase)
+3. The number of riders in 2021 was 1,243,103 and in 2022 it was 2,049,576 (+806,473 / +64% increase)
+4. The revenue in 2021 was $4.95M and in 2022 it was $10.22M ($5.26M Increase)
+5. The profit in 2021 was $3.41M and in 2022 it was $7.03M ($3.61M Increase)
+
+The price increased by 25% in 2022 compared to 2021, and the number of riders increased by 64%, this shows there was in increase in riders, revenue, and profit by increasing the price in 2022.
+
+1. Price Elasticity = 64% / 25% = 2.56%
+
+### Recommendation
+Increase: As we had a 25% increase in price last year, it may benefit us to have a smaller price increase this year so we can avoid hitting a price ceiling where demand starts to decrease. An increase in the range of 10-15% could test the market's response, without risking a significant loss of customers.
+
+Price setting:
+* If the price in 2022 was $4.99, a 10% increase would make the new price $5.49
+* A 15% increase would set the price to $5.74
+
+Recommended Strategy:
+Market Analysis: Conduct market research to understand customer satisfaction, potential competitive changes, and overall economic environment. This can guide whether leaning towards the lower or higher end of the suggested price increase.
+
+Segmented Pricing Strategy: Consider offering registered users a discounted price, at the lower end of the suggested price increase, compared to casual riders who would pay the 15% increase. This gives the riders an incentive to become registered users, as there is an incentive.
+
+Monitor and Adjust: Implement the new prices but be ready to adjust based on the customer feedback and sales data. Monitoring will allow you to fine-tune the pricing strategy without committing fully to a price that might turn out to be too high.
