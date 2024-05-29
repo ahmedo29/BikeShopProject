@@ -48,3 +48,82 @@ The stages for this project will be;
   * Testing
   * Analysis
 
+What should the dashboard contain?
+The dashboard should contain several visualisations, such as:
+* Table to show the hourly revenue per weekday
+* Profit and Revenue trends per month & year
+* Revenue per season
+* Doughnut chart of riders per category
+* KPIs (Total revenue, total profit, profit margin percentage, total riders)
+* Filters for the dashboard (Year, Rider type)
+
+# Development
+## Pseudocode
+What is the approach you will use to create a solution from start to finish?
+
+1. Get the data
+2. Explore and Load the data into SQL
+3. Test the data with SQL
+4. Visualise the data in Power Bi
+5. Generate the findings based on the insights
+6. Write the documentation
+7. Publish the data to GitHub
+
+# SQL Queries
+## UNION the data
+```sql
+-- UNION the two tables to show 2021 & 2022 data
+SELECT *
+FROM bike_share_yr_0
+UNION					-- Removes any duplicated rows
+SELECT *
+FROM bike_share_yr_1;
+```
+
+## CTE to join the UNION and cost table
+```sql
+WITH bike_share_data AS (
+SELECT *
+FROM bike_share_yr_0
+UNION
+SELECT *
+FROM bike_share_yr_1 )
+
+SELECT *
+FROM bike_share_data
+LEFT JOIN cost_table
+	ON bike_share_data.yr = cost_table.yr
+```
+## Query to get only relevent data for analysis
+```sql
+/*
+	SELECTING the columns that we need for our analysis
+	Adding extra fields we need:
+		Revenue
+		Profits
+*/
+
+WITH bike_share_data AS (
+	SELECT *
+	FROM bike_share_yr_0
+	UNION
+	SELECT *
+	FROM bike_share_yr_1
+)
+
+SELECT
+	dteday,
+	season,
+	bike_share_data.yr,
+	weekday,
+	hr,
+	rider_type,
+	riders,
+	price,
+	COGS,
+	riders * price AS revenue,
+	riders * price - COGS * riders AS profit
+FROM bike_share_data
+LEFT JOIN cost_table
+	ON bike_share_data.yr = cost_table.yr;
+```
