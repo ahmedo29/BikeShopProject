@@ -174,7 +174,7 @@ I used Power Query to transform the data to make it suitable for analysis and to
 # Visualisation
 ## Results
 The dashboard looks as below:
-![Dashboard](assets/images/dashboard1.png)
+![Dashboard](assets/images/dashboard2.png)
 
 # Dax Measures
 ### Profit Margin (%)
